@@ -7,3 +7,4 @@ p '=== simulator all ==='
 DuckSimulator.new.simulator
 p '=== simulator rubber_duck ==='
 DuckSimulator.new.simulator(RubberDuck.new)
+Goose.new.honk

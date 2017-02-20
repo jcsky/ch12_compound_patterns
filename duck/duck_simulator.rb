@@ -1,11 +1,12 @@
 class DuckSimulator
-  attr_reader :mallar_duck, :redhead_duck, :duck_call, :rubber_duck
+  attr_reader :mallar_duck, :redhead_duck, :duck_call, :rubber_duck, :goose
 
   def initialize
     @mallar_duck = MallarDuck.new
     @redhead_duck = RedheadDuck.new
     @duck_call = DuckCall.new
     @rubber_duck = RubberDuck.new
+    @goose = GooseAdapter.new(Goose.new)
   end
 
   def simulator(*args)
@@ -14,12 +15,10 @@ class DuckSimulator
       redhead_duck.quack
       duck_call.quack
       rubber_duck.quack
+      goose.quack
     else
       args.each(&:quack)
     end
   end
 
-  # def simulator(duck)
-  #   duck.quack
-  # end
 end
