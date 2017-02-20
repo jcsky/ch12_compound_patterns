@@ -1,6 +1,6 @@
-require_relative 'base'
+require_relative 'quackable'
 
-class RedheadDuck
+class MallarDuck
   include Quackable
 
   def quack
